@@ -141,7 +141,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
             ), 
             InlineKeyboardButton(
                 text="🛠️ GitHub",
-                url=f"http://github.com/VasuXD",
+                url=f"http://github.com/VasuXD/Layla",
             )
         ],
         [
@@ -168,7 +168,7 @@ keyboard = InlineKeyboardMarkup(
             ),
             InlineKeyboardButton(
                 text="🛠️ GitHub",
-                url=f"http://github.com/VasuXD",
+                url=f"http://github.com/VasuXD/Layla",
             ), 
         ],
         [
