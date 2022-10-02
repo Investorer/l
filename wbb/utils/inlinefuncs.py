@@ -24,6 +24,7 @@ SOFTWARE.
 import asyncio
 import os
 import sys
+from contextlib import suppress
 from html import escape
 from re import sub as re_sub
 from sys import version as pyver
@@ -220,7 +221,7 @@ async def google_search_func(answers, text):
             break
         limit += 1
 
-        try:
+        with suppress(KeyError):
             msg = f"""
 [{i['titles']}]({i['links']})
 {i['descriptions']}"""
@@ -234,8 +235,6 @@ async def google_search_func(answers, text):
                     ),
                 )
             )
-        except KeyError:
-            pass
     return answers
 
 
@@ -299,7 +298,6 @@ async def torrent_func(answers, text):
                 ),
             )
         )
-        pass
     return answers
 
 
